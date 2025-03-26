@@ -1,0 +1,295 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #003366; /* Deep Blue */
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+    font-size: 28px; /* Increased for prominence */
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation: slideInLogo 1.5s ease-out forwards, pulse 2s infinite alternate;
+}
+
+/* Hover effect for logo */
+nav .logo:hover {
+    color: #ff9800; /* Change color on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Slide-in animation for logo */
+@keyframes slideInLogo {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Pulsing animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Slightly larger font for readability */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9800; /* Orange hover effect */
+}
+
+.auth-buttons .btn {
+    background: #ff5722; /* Bright Orange */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.auth-buttons .btn:hover {
+    transform: scale(1.1);
+    background-color: #ff9800;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background: #003366; /* Deep Blue */
+    flex-wrap: wrap;
+    color: white;
+    position: relative;
+}
+
+.hero .text {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.6);  /* Dark overlay for readability */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero .text h1 {
+    font-size: 1.8em; /* Reduced size from 2em */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Text shadow to enhance readability */
+}
+
+.hero .text p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.hero .image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideIn 2s ease-in-out;
+}
+
+.hero .image img {
+    max-width: 70%;  /* Reduced size to make the image smaller */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Get Started Button Animation */
+.hero .text .btn.get-started {
+    animation: bounceIn 1.5s ease-in-out;
+    background-color: #ff9800; /* Bright Yellow */
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .text .btn.get-started:hover {
+    background-color: #ff5722;
+    transform: translateY(-5px);
+}
+
+/* About Us Section Enhancement */
+.about {
+    background: linear-gradient(135deg, #003366, #ff5722); /* Deep Blue to Bright Orange */
+    color: white;
+    padding: 40px 30px;  /* Reduced padding */
+    text-align: center;
+    opacity: 0;
+    animation: fadeInAbout 3s ease forwards, backgroundPulse 5s infinite alternate;
+    border-radius: 15px; /* Reduced border radius */
+    margin: 20px auto;
+    max-width: 70%;  /* Reduced max-width */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Slightly smaller box shadow */
+}
+
+@keyframes fadeInAbout {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes backgroundPulse {
+    0% {
+        background: linear-gradient(135deg, #003366, #ff5722);
+    }
+    100% {
+        background: linear-gradient(135deg, #ff5722, #003366);
+    }
+}
+
+/* Enhanced Heading style */
+.about h2 {
+    font-size: 2.4em; /* Reduced font size */
+    margin-bottom: 20px;
+    animation: fadeInContent 1s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Text shadow for more contrast */
+    letter-spacing: 1px; /* Slight letter spacing */
+    font-weight: 600; /* Bold for prominence */
+}
+
+/* Enhanced Paragraph style */
+.about p {
+    font-size: 1.2em; /* Reduced font size */
+    opacity: 0;
+    animation: fadeInContent 1s ease-out forwards;
+    animation-delay: 1s;
+    line-height: 1.6;
+    max-width: 650px;  /* Reduced max-width */
+    margin: 0 auto;
+    text-align: justify; /* Justify text for a cleaner look */
+    font-weight: 300; /* Lighter weight for paragraph text */
+}
+
+/* Staggered Content Fade-in */
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Hover Effects */
+.auth-buttons .btn:hover {
+    background-color: #ff5722;
+    transform: scale(1.1);
+}
+
+/* Step Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px;
+    background: #fff;
+    text-align: center;
+}
+
+.step {
+    padding: 20px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    width: 220px; /* Slightly wider for better balance */
+    margin: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.step:hover {
+    transform: scale(1.1);
+    background: #ff9800;
+    color: white;
+}
+
+.step.highlight {
+    background: #ff9800;
+    color: white;
+    transition: 0.5s;
+}

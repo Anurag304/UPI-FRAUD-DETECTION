@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">FraudDetect</div>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button id="loginBtn" class="btn login">Login</button>
+            <button id="registerBtn" class="btn register">Register</button>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="text">
+            <h1 class="fade-in">Advanced UPI Fraud Detection</h1>
+            <p class="fade-in">Protecting users from fraudulent transactions using AI-powered security.</p>
+            <a href="{{ url_for('predict_page') }}">
+                <button class="btn get-started bounce">Get Started</button>
+            </a>
+        </div>
+        <div class="image slide-in">
+            <img src="{{ url_for('static', filename='image2.jpg') }}" alt="Fraud Detection Illustration">
+        </div>
+    </section>
+    
+    <section class="steps-container">
+        <div class="step scale-up">1. User Registration/Login</div>
+        <div class="step scale-up">2. OTP Verification</div>
+        <div class="step scale-up">3. Fraud Alert & Prevention</div>
+    </section>
+    
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to securing digital transactions and protecting users from financial fraud. Our AI-powered systems monitor transactions in real-time to detect and prevent fraud before it happens.</p>
+    </section>
+</body>
+</html>
